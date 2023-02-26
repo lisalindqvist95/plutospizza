@@ -3,12 +3,17 @@ body {
     font-family: 'Sono', sans-serif;
 }
 
+img .header {
+height: 100px;
+}
+
 .brand {
     color: #355914;
     display: inline-block;
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 1.6rem;
     text-transform: uppercase;
+    z-index: 1;
 }
 
 .light-bg {
