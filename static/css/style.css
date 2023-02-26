@@ -1,20 +1,14 @@
 body {
     background-color: #F9FAFC;
+    font-family: 'Sono', sans-serif;
 }
 
 .brand {
-    font-family: Lato, sans-serif;
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: #4A4A4F;
-}
-
-.red-o {
-    color: #FFF;
-}
-
-.thin {
-    font-weight: 200;
+    color: #355914;
+    display: inline-block;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.6rem;
+    text-transform: uppercase;
 }
 
 .light-bg {
@@ -22,7 +16,7 @@ body {
 }
 
 .dark-bg {
-    background-color: #445261;
+    background-color: #355914;
 }
 
 .main-bg {
@@ -43,13 +37,14 @@ body {
     bottom: 5%;
     min-width: 30%;
     left: -2px;
-    background-color: #23BBBB;
+    background-color: #8a3503;
 }
 
 .author {
-    color: black;
+    color: #FFF;
     margin: 4px;
     text-transform: uppercase;
+    font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 .masthead {
@@ -62,7 +57,7 @@ body {
 }
 
 .masthead-text {
-    background-color: #445261;
+    background-color: #000;
     color: white;
     position: relative;
 }
@@ -89,21 +84,23 @@ body {
 .post-link {
     text-decoration: none;
     color: #445261;
+    text-transform: uppercase;
 }
 
 .post-link:hover,
 .page-link {
-    color: #E84610;
+    color: #355914;
 }
 
 .post-title {
     margin-top: 20%;
     margin-left: 5%;
+    text-transform: uppercase;
 }
 
 .post-subtitle {
     margin-left: 5%;
-    color: lightgray;
+    color: #23BBBB;
 }
 
 .btn-signup {
