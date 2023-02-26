@@ -21,7 +21,7 @@ height: 100px;
 }
 
 .dark-bg {
-    background-color: #355914;
+    background-color: #1a1b19;
 }
 
 .main-bg {
@@ -40,8 +40,8 @@ height: 100px;
 .image-flash {
     position: absolute;
     bottom: 5%;
-    min-width: 30%;
-    left: -2px;
+    min-width: 100%;
+    left: 0px;
     background-color: #8a3503;
 }
 
@@ -57,7 +57,7 @@ height: 100px;
     overflow: hidden;
     position: relative;
     display: inline-block;
-    height: 33vh;
+    height: 30vh;
     width: 100%;
 }
 
@@ -142,3 +142,43 @@ height: 100px;
     background: transparent;
     border: none;
 }
+
+sidebar {
+    width: 20%;
+}
+
+.profile {
+    border-radius: 50%;
+    width:50%;
+}
+
+sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    float: right;
+    padding: 58px 0 0; /* Height of navbar */
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px 0 rgb(0 0 0 / 5%);
+    width: 40px;
+    z-index: 600;
+  }
+.sidebar .active {
+    border-radius: 5px;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+  }
+  
+.sidebar-sticky {
+    position: relative;
+    top: 0;
+    height: calc(100vh - 48px);
+    padding-top: 0.5rem;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+  }
+  
+.profile-text{
+    font-size: 12px;
+}
+
+section{width:100%; float:left;}
