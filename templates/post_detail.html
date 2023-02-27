@@ -9,36 +9,40 @@
                 <h1 class="post-title">{{ post.title }}</h1>
                 <!-- Post author goes before the | the post's created date goes after -->
                 <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
-                <div class="d-none d-md-block col-md-9 price">
-                    <p class="restaurant_detail">Restaurant: {{ post.restaurant }} Address: {{ post.address }}</p>
-                </div>
             </div>
         </div>
     </div>
 </div>
 
 <!-- Content-->
-<div class="container">
-    <div class="row">
+<div class="container p-0">
+    <div class="container pt-3"></div>
+    <div class="card mb-3 recipe-detail-card">
+    <div class="row no-gutters">
         <div class="col card mb-4  mt-3 left  top">
-            <div class="card-body">
-                <div class="d-none d-md-block col-md-6 masthead-image">
+            <div class="col-12 col-md-3">
                     <!-- The featured image URL goes in the src attribute -->
                     {% if "placeholder" in post.featured_image.url %}
-                    <img src="https://res.cloudinary.com/dzaewkloa/image/upload/v1677504913/Pluto%27s%20Pizza/placeholder_kokn44.png" width="100%">
+                    <img src="https://res.cloudinary.com/dzaewkloa/image/upload/v1677504913/Pluto%27s%20Pizza/placeholder_kokn44.png" class="recipe-detail-img" alt="Plceholder image: Pizza">
                     {% else %}
-                    <img src=" {{ post.featured_image.url }}" width="100%">
+                    <img src=" {{ post.featured_image.url }}" class="recipe-detail-img" alt="Picture of pizza">
                     {% endif %}
                 </div>
-                <div class="d-none d-md-block col-md-6 price">
-                    <p class="rating">Rating: {{ post.rating }}</p>
+                <div class="col-12 col-md-6">
+                    <div class="card-body recipe-detail-outer py2">
+                        <div>
+                  <p class="restaurant_detail">Restaurant: {{ post.restaurant }} </p>
                 </div>
-                <div class="d-none d-md-block col-md-6 price">
+                    <p class="address-detail"> Address: {{ post.address }} </p>
+                    <p class="rating" id="rating">Rating: {{ post.rating }}</p>
                     <p class="price">Price: {{ post.price }}</p>
+                    <p class="pizza">Pizza: {{ post.pizza }}</p>
                 </div>
-                <div class="d-none d-md-block col-md-6 price">
-                    <p class="Pizza">Pizza: {{ post.pizza }}</p>
-                </div>
+            </div>
+
+            
+
+    
                 <!-- The post content goes inside the card-text. -->
                 <!-- Use the | safe filter inside the template tags -->
                 <p class="card-text ">
