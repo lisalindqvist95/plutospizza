@@ -14,9 +14,11 @@ class Post(models.Model):
     )
     featured_image = CloudinaryField('image', default='placeholder')
     excerpt = models.TextField(blank=True)
-    updated_on = models.DateTimeField(auto_now=True)
-    content = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
+    updated_on = models.DateTimeField(auto_now=True)
+    restaurant = models.CharField(max_length=200, null=True)
+    address = models.CharField(max_length=200, null=True)
+    content = models.TextField()
     status = models.IntegerField(choices=STATUS, default=0)
     likes = models.ManyToManyField(
         User, related_name='blogpost_like', blank=True)
@@ -29,6 +31,11 @@ class Post(models.Model):
 
     def number_of_likes(self):
         return self.likes.count()
+
+
+class Restaurant(models.Model):
+    name = models.CharField(max_length=200)
+    address = models.CharField(max_length=200)
 
 
 class Comment(models.Model):

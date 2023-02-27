@@ -107,14 +107,15 @@ body {
 
 .image-flash {
     position: absolute;
-    bottom: 5%;
+    bottom: 90%;
     min-width: 100%;
     left: 0px;
     background-color: #8a3503;
 }
 
-.author {
+.restaurant {
     color: #FFF;
+    text-align: center;
     margin: 4px;
     text-transform: uppercase;
     font-family: 'Plus Jakarta Sans', sans-serif;
