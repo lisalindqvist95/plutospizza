@@ -17,18 +17,20 @@
 <!-- Content-->
 <div class="container p-0">
     <div class="container pt-3"></div>
-    <div class="card mb-3 recipe-detail-card">
+    <div class="card mb-3">
     <div class="row no-gutters">
         <div class="col card mb-4  mt-3 left  top">
-            <div class="col-12 col-md-3">
+            <div class="col-12 col-md-4">
+                <div class="col-8">
                     <!-- The featured image URL goes in the src attribute -->
                     {% if "placeholder" in post.featured_image.url %}
-                    <img src="https://res.cloudinary.com/dzaewkloa/image/upload/v1677504913/Pluto%27s%20Pizza/placeholder_kokn44.png" class="recipe-detail-img" alt="Plceholder image: Pizza">
+                    <img src="https://res.cloudinary.com/dzaewkloa/image/upload/v1677504913/Pluto%27s%20Pizza/placeholder_kokn44.png" class="recipe-detail-img" alt="Placeholder image: Pizza">
                     {% else %}
-                    <img src=" {{ post.featured_image.url }}" class="recipe-detail-img" alt="Picture of pizza">
+                    <img src=" {{ post.featured_image.url }}" class="recipe-detail-img" alt="Placeholder image: Pizza">
                     {% endif %}
                 </div>
-                <div class="col-12 col-md-6">
+            </div>
+                <div class="col-12 col-md-8">
                     <div class="card-body recipe-detail-outer py2">
                         <div>
                   <p class="restaurant_detail">Restaurant: {{ post.restaurant }} </p>
