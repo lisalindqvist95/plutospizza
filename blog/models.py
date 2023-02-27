@@ -17,7 +17,10 @@ class Post(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
     restaurant = models.CharField(max_length=200, null=True)
+    pizza = models.CharField(max_length=80, null=True)
+    price = models.CharField(max_length=5, null=True)
     address = models.CharField(max_length=200, null=True)
+    rating = models.IntegerField(default=0)
     content = models.TextField()
     status = models.IntegerField(choices=STATUS, default=0)
     likes = models.ManyToManyField(
@@ -31,11 +34,6 @@ class Post(models.Model):
 
     def number_of_likes(self):
         return self.likes.count()
-
-
-class Restaurant(models.Model):
-    name = models.CharField(max_length=200)
-    address = models.CharField(max_length=200)
 
 
 class Comment(models.Model):

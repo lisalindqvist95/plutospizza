@@ -107,7 +107,7 @@ body {
 
 .image-flash {
     position: absolute;
-    bottom: 90%;
+    bottom: 85%;
     min-width: 100%;
     left: 0px;
     background-color: #8a3503;
@@ -137,17 +137,21 @@ body {
     position: relative;
 }
 
+.restaurant_detail, .address-detail {
+    color: #000;
+    font-size: 15px;
+    margin-left: 5%;
+}
+
 .masthead-image {
     position: relative;
     overflow: hidden;
 }
 
-.masthead-image:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 90%;
-    height: 100%;
+
+
+.price {
+    font-size: 20px;
 }
 
 .post-link {
@@ -220,3 +224,25 @@ body {
 footer {
     z-index: 2000;
 }
+
+
+
+
+.rating-list li {
+    float: right;
+    color: #ddd;
+    padding: 10px 5px;
+  }
+
+  .rating-list li:hover,
+  .rating-list li:hover ~ li {
+    color: orange;
+  }
+
+  .rating-list {
+    display: inline-block;
+    list-style: none;
+  }
+  .checked {
+      color: orange;
+  }
