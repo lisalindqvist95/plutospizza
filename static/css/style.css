@@ -3,31 +3,99 @@ body {
     font-family: 'Sono', sans-serif;
 }
 
-img .header {
-height: 100px;
-}
-
-.brand {
-    color: #355914;
-    display: inline-block;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 1.6rem;
-    text-transform: uppercase;
-    z-index: 1;
-}
-
 .light-bg {
     background-color: #fff;
 }
 
 .dark-bg {
-    background-color: #1a1b19;
+    background-color: #355914;
+    ;
 }
 
 .main-bg {
     background-color: #F9FAFC;
 }
 
+
+/* Navigation*/
+.nav-links{
+    width: 40%;
+}
+.brand {
+    color: #355914;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 3vh;
+    text-transform: uppercase;
+    z-index: 1;
+    text-align: center;
+}
+
+
+/* Sidebar */
+#wrapper {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#sidebar-wrapper {
+    z-index: 1000;
+    position: absolute;
+    right: 250px;
+    width: 0;
+    height: 100%;
+    margin-right: -250px;
+    overflow-y: auto;
+    background: #F9FAFC;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    position: absolute;
+}
+
+#wrapper {
+    padding-right: 250px;
+}
+
+#sidebar-wrapper {
+    width: 23%;
+}
+
+.profile {
+    border-radius: 50%;
+    width:60%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+}
+
+.profile-text{
+    font-size: 1.5vh;
+    padding: 10px;
+    text-align: center;
+    color: #584137;
+}
+
+.profile-heading {
+    font-size: 3.5vh;
+    padding: 10px;
+    text-align: center;
+    padding-top: 20px;
+    text-transform: uppercase;
+    color: #584137;
+}
+
+
+
+/* Cards */
 .card {
     border: none;
     background-color: transparent;
@@ -52,18 +120,19 @@ height: 100px;
     font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
+/* Content */
+
 .masthead {
-    margin-top: 10px;
+    margin-top: 0px;
     overflow: hidden;
     position: relative;
     display: inline-block;
-    height: 30vh;
+    height: 25vh;
     width: 100%;
 }
 
 .masthead-text {
-    background-color: #000;
-    color: white;
+    color: #000;
     position: relative;
 }
 
@@ -78,35 +147,35 @@ height: 100px;
     top: 0;
     right: 90%;
     height: 100%;
-    width: 150%;
-    background: #445261;
-    -webkit-transform: skew(15deg);
-    -moz-transform: skew(15deg);
-    transform: skew(15deg);
-    z-index: 100;
 }
 
 .post-link {
     text-decoration: none;
-    color: #445261;
+    color: #584137;
     text-transform: uppercase;
 }
 
 .post-link:hover,
 .page-link {
-    color: #355914;
+     color: #f4a003;
 }
 
 .post-title {
-    margin-top: 20%;
+    margin-top: 10%;
     margin-left: 5%;
     text-transform: uppercase;
 }
 
 .post-subtitle {
     margin-left: 5%;
-    color: #23BBBB;
+    background-color: #8a3603;
+    padding-left: 5px;
+    color: #FFF;
 }
+
+
+
+/* NOT DEALT WITH YET */
 
 .btn-signup {
     background-color: #23BBBB;
@@ -126,7 +195,7 @@ height: 100px;
 
 .link:hover,
 .link:active {
-    color: #445261;
+    color: #584137;
     text-decoration: underline;
 }
 
@@ -143,42 +212,10 @@ height: 100px;
     border: none;
 }
 
-sidebar {
-    width: 20%;
-}
 
-.profile {
-    border-radius: 50%;
-    width:50%;
-}
 
-sidebar {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    float: right;
-    padding: 58px 0 0; /* Height of navbar */
-    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px 0 rgb(0 0 0 / 5%);
-    width: 40px;
-    z-index: 600;
-  }
-.sidebar .active {
-    border-radius: 5px;
-    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
-  }
-  
-.sidebar-sticky {
-    position: relative;
-    top: 0;
-    height: calc(100vh - 48px);
-    padding-top: 0.5rem;
-    overflow-x: hidden;
-    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
-  }
-  
-.profile-text{
-    font-size: 12px;
-}
+/* Footer */
 
-section{width:100%; float:left;}
+footer {
+    z-index: 2000;
+}

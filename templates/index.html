@@ -6,16 +6,16 @@
     <div class="row">
 
         <!-- Blog Entries Column -->
-        <div class="col-9 mt-3 left">
+        <div class="col-10 mt-4 left">
             <div class="row">
                 {% for post in post_list %}
-                <div class="col-md-3">
-                    <div class="card mb-3">
+                <div class="col-md-4">
+                    <div class="card mb-4">
                         <div class="card-body">
                             <div class="image-container">
                                 {% if "placeholder" in post.featured_image.url %}
                                 <img class="card-img-top"
-                                    src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
+                                    src="https://res.cloudinary.com/dzaewkloa/image/upload/v1677504913/Pluto%27s%20Pizza/placeholder_kokn44.png">
                                 {% else %}
                                 <img class="card-img-top" src=" {{ post.featured_image.url }}">
                                 {% endif %}

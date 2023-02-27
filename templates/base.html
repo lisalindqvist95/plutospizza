@@ -23,11 +23,14 @@
 <body class="d-flex flex-column h-100 main-bg">
 
     <!-- Navigation -->
+    <!-- Header image -->
     <img class="header"src="https://res.cloudinary.com/dzaewkloa/image/upload/v1677445792/Pluto%27s%20Pizza/header_wwxrd7.jpg"
     alt="header image: pizza">
+    <!-- Links -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
         <div class="container-fluid">
             <div class="collapse navbar-collapse" id="navbarText">
+                <span class="nav-links">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
@@ -46,52 +49,48 @@
                     {% endif %}
 
                 </ul>
+            </span>
+                <!-- Brand -->
                 <a class="navbar-brand" href="{% url 'home' %}"><span class="brand">Pluto's Pizza Blog</span></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                     aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <span class="navbar-text text-muted">
-                    adventures of a software developer
-                </span>
             </div>
         </div>
     </nav>
 
-    <div class="col-lg-3  col-md-3 col-sm-12"></div>
-    <div class="well">
-        <h2>About Author</h2>
-        <img src="" class="img-rounded" />
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
-        <a href="#" class="btn btn-default">Read more</a>
-    </div>
-</div>
-    <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-white col-md-3">
-        <div class="container-fluid">
-        <div class="position-sticky">
-          <div class="list-group list-group-flush mx-3 mt-4">
+
+      <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper" class="">
+            <div class="profile-picture">
             <img class="profile "src="https://res.cloudinary.com/dzaewkloa/image/upload/v1677451653/Pluto%27s%20Pizza/profile_kdlr9o.jpg"
             alt="profile picture: Pluto">
-            <h2>Meet Pluto</h2>
-            <p class="profile-text">Pluto is a photographer and food enthusiast from </p>
-          </div>
         </div>
-        </div>
-      </nav>
-
+            <h2 class="profile-heading" >Meet Pluto</h2>
+            <p class="profile-text">Pluto is a photographer and food enthusiast from Et aut repe am...Alit poreceperum volorate dolectus, optia verum coreped ersperrum quae es eossitat.
+                Ita nonsed moluptatet offic tem everrum acescius.
+                Tias idia pore, te dellatur?</p>
+    </div>
+         <!-- Content start -->
+        <div id="page-content-wrapper">
+    <section class="post-content-section col-md-10">
     <main class="flex-shrink-0 main-bg">
         {% block content %}
         <!-- Content Goes here -->
         {% endblock content %}
         
     </main>
-   
+</section>
+</div>
+</div>
     
 
   
 
     <!-- Footer -->
-    <footer class="footer mt-auto py-3 dark-bg">
+    <footer class="footer mt-auto py-3 dark-bg fixed-bottom">
         <p class="m-0 text-center text-white">Made by Code Instituters</p>
         <p class="m-0 text-center text-white">Follow us: <i class="fab fa-facebook-square ms-3"></i>
             <i class="fab fa-twitter-square ms-3"></i>
