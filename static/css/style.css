@@ -48,6 +48,19 @@ body {
     overflow: hidden;
 }
 
+#sidebar-wrapper2 {
+    z-index: 1000;
+    position: absolute;
+    right: 250px;
+    width: 0;
+    height: 150%;
+    margin-right: -250px;
+    overflow-y: auto;
+    background: #e4e4e4;
+    overflow: hidden;
+    display: none;
+}
+
 #page-content-wrapper {
     width: 100%;
     position: absolute;
@@ -166,9 +179,18 @@ body {
     text-transform: uppercase;
 }
 
-.post-link:hover,
+.post-link:hover{
+    color: #f4a003;
+}
 .page-link {
-     color: #f4a003;
+     color: #8a3503;
+     border-radius: 5px;
+     margin-bottom: 15px;
+}
+
+.page-link:hover {
+    color: #FFF;
+    background-color: #8a3603;
 }
 
 .post-title {
@@ -267,14 +289,21 @@ footer {
    }
 
   @media only screen and (max-width: 767px) {
-   #sidebar-wrapper {
-    position: fixed top;
+   #sidebar-wrapper2 {
+    background: #e4e4e4;
+    position: fixed;
     padding-right: 20px;
     padding-left: 20px;
     width: 100%;
     height: 50%;
     overflow: visible;
+    display: block;
     }
+    
+    #sidebar-wrapper {
+      display: none;
+        }
+
 
     #page-content-wrapper {
         margin-top: 500px;
