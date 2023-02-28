@@ -196,6 +196,17 @@ body {
     color: #f4a003;
 }
 
+.btn-signout {
+    background-color: #f4a003;
+    color: #fff;
+}
+
+.btn-signout:hover,
+.btn-signout:active {
+    background-color: #fff;
+    color: #f4a003;
+}
+
 .link {
     color: #f4a003;
     text-decoration: none;
