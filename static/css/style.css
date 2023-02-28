@@ -8,7 +8,7 @@ body {
 }
 
 .light-bg {
-    background-color: #fff;
+    background-color: #FFF;
 }
 
 .dark-bg {
@@ -30,6 +30,10 @@ body {
     z-index: 1;
 }
 
+.nav-link:hover {
+color: #f4a003;
+}
+
 
 /* Sidebar */
 #wrapper {
@@ -42,7 +46,7 @@ body {
     right: 250px;
     width: 0;
     height: 150%;
-    margin-right: -250px;
+    margin-right: -245px;
     overflow-y: auto;
     background: #e4e4e4;
     overflow: hidden;
@@ -51,14 +55,13 @@ body {
 #sidebar-wrapper2 {
     z-index: 1000;
     position: absolute;
-    right: 250px;
+    right: 245px;
     width: 0;
     height: 150%;
     margin-right: -250px;
     overflow-y: auto;
     background: #e4e4e4;
     overflow: hidden;
-    display: none;
 }
 
 #page-content-wrapper {
@@ -268,6 +271,7 @@ footer {
 .fa-brands {
     color: #FFF;
     }
+
 .fa-brands:hover {
 color: #f4a003;
 }
