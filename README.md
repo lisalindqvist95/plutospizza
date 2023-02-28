@@ -6,7 +6,7 @@ Pluto’s Pizza Blog is a personal blog for Pluto Johnsson where he documents an
 
 A visitor to Easy Eater would be someone who is most likely an adult who enjoys their food and trying new recipes but also wants to save time and effort when deciding what to cook for dinner every night of the week.
 
-### UX
+#### UX
 A visitor to Pluto’s Pizza Blog would most likely be someone who lives in the same city or neighborhood and who enjoys eating at restaurants and especially likes pizza. It could also be someone who is friends or family with Pluto and enjoys reading the blog to keep up with him.
 
 ### User Stories
@@ -65,4 +65,67 @@ The fonts used are Plus Jakarta Sans and Sono. Sono was chosen for its familiar 
 The first wireframes were rough sketches made by hand on paper for the layout. (Will insert pictures of this here)
 
 The second wireframes were made in InDesign to see if the colors and fonts would work together. 
+![Wireframe1](media/images/wireframe1.png)
+![Wireframe2](media/images/wireframe2.png)
 
+
+## Agile method
+
+To manage the user stories for this project Github project was used. The project board can be found [here](https://github.com/users/lisalindqvist95/projects/3/views/1).
+
+
+## Data Model
+
+## Testing
+
+## Security Features and Defensive Design
+
+## Features
+
+## Deployment 
+
+This project was depolyed via Heroku from the GitHub repository. See the steps taken below:
+
+### Create Heroku App:
+- Log in to [Heroku](https://dashboard.heroku.com/apps)
+- Press the "New" button on the main page and choose "Create New App" from the drop-down menu
+- Enter the app name and select your region
+- Then "Create App"
+
+### Create a database with ElephantSQL
+- Log in to [ElephantSQL](https://www.elephantsql.com/)
+- Press the button "Create New Instance" i the top right corner
+- Give your plan a name and select your plan 
+- Press the button "Select Region" and select a data center near you
+- Then press the "Review" button
+- Check that all your details are correct and press "Create instance"
+- Copy the URL database to paste in your GitPod workspace
+
+
+### Github env.py and settings.py file:
+- Create an env.py file in the main directory of your GitPod workspace
+- In the env.py file add the DATABASE_URL value and create a chosen SECRET_KEY 
+- Go into the settings.py file to import the env.py file, add file paths for both the SECRETKEY and DATABASE_URL (comment out the default database)
+- Save your files and make migrations
+
+### Create files / directories
+- Create a requirements.txt file in the main directory
+- Create a "Procfile" in the main directory and add: gunicorn project-name.wsgi
+
+### Heroku Config Vars
+- DATABASE_URL value (copy database from ElephantSQL)
+- SECRET_KEY value 
+- CLOUDINARY_URL
+- PORT = 8000
+- DISABLE_COLLECTSTATIC = 1
+
+### Deployment
+- Under the deploy tab on Heroku conncet to your GitHub and add your repository
+- Deploy at the bottom of the page 
+- Click View to view the deployed site.
+
+# Languages
+
+## Frameworks - Libraries - Programs Used
+
+## Credits
