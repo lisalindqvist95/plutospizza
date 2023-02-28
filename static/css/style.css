@@ -265,7 +265,10 @@ footer {
     z-index: 2000;
 }
 
-.social-media-links:hover {
+.fa-brands {
+    color: #FFF;
+    }
+.fa-brands:hover {
 color: #f4a003;
 }
 
