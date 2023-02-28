@@ -1,108 +1,68 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Pluto's Pizza Blog 
 
-Welcome lisalindqvist95,
+## Project Goals:
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+Pluto’s Pizza Blog is a personal blog for Pluto Johnsson where he documents and reviews restaurant pizzas that he has tried. The blog is targeted towards other people in the area who share the same interest for food and especially pizza. On the site people can get recommendations for the best pizza in the neighborhood and get a glimpse of Plutos personal life. The link for the live project can be found here - [Pluto's Pizza Blog](https://plutospizza.herokuapp.com/)
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+A visitor to Easy Eater would be someone who is most likely an adult who enjoys their food and trying new recipes but also wants to save time and effort when deciding what to cook for dinner every night of the week.
 
-## Gitpod Reminders
+### UX
+A visitor to Pluto’s Pizza Blog would most likely be someone who lives in the same city or neighborhood and who enjoys eating at restaurants and especially likes pizza. It could also be someone who is friends or family with Pluto and enjoys reading the blog to keep up with him.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+### User Stories
 
-`python3 -m http.server`
+#### Owner Profile
+- As a Site Owner I have an account where I can log in and create, edit and delete blog posts.
+- As a Site Owner, I can log in and out of my account so that it stays secure.
+- As a Site Owner I can see if I am logged in or out so that I know my status.
 
-A blue button should appear to click: _Make Public_,
+#### User Profile
+- As a New User I can register for an account so that I can comment and like posts.
+- As a Site User I have an account where I can log in and like/comment on posts.
+- As a Site User, I can log in and out of my account so that it stays secure.
+- As a Site user I can see if I am logged in or out so that I know my status.
 
-Another blue button should appear to click: _Open Browser_.
+#### User Navigation
+- As a Site User I can immediately easily find the navigation so that I can use the website with ease.
+- As a Site User, I can view a list of blog posts so that I can choose which post to read.
+- As a Site User, I can click on the blog post I want to read so that I can choose to read the full post and comments left by other users.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+#### Post Details
+- As a Site User I can see the name and location of the restaurant so that I know where to go if I want to try it myself.
+- As a Site User I can see the name of the pizza so that I can order it myself.
+- As a Site User I can see an image of the pizza so that the site is more visually appealing and I can make my own judgement of the pizza.
+- As a Site User I can see what the price range is for the pizza so that I know if it’s something I’m interested in.
 
-A blue button should appear to click: _Make Public_,
+#### About Blog
+- As a Site User I can find a summery about who owns the blog, what content it has and why it exists so that I can decide if it’s something I want to read.
 
-Another blue button should appear to click: _Open Browser_.
+#### User stories not yet implemented
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+The following user stories haven't been made due to time constraints. It is intended that some or all of these user stories will be implemented at a later date. 
 
-To log into the Heroku toolbelt CLI:
+- As a Site User I can change the order of the blog posts depending on what I’m looking for.
+- As a Site User, I can search and filter blog posts so that I can find what I’m looking for.
+- As a Site User i can bookmark a post so that I can easily find it later.
+- As a Site uUer I can see a scale of different categories such as crust thickness or cheese amount.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+### Design
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+#### Colour Pallete
 
-------
+![Colour Palette](media/images/colors.png)
 
-## Release History
+The colour pallete on the site was chosen based on the header image, the colours are also often found in food and on pizza
+toppings. They were chosen to invoke a fresh feeling for the user as well as have a good contrast to make the site accessible for the user.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+#### Imagery
+The static images on the the site were chosen to match the colour palette and to give the blog a more personal feeling. The blog post
+images are uploaded with the post and should contain a photo of the pizza being reviwed.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+#### Fonts
+The fonts used are Plus Jakarta Sans and Sono. Sono was chosen for its familiar and playful feeling while still being readable. Plus Jakarta Sans was chosen to contrast Sono and make the logo stand out. The fonts were imported via Google Fonts.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+#### Wireframes
+The first wireframes were rough sketches made by hand on paper for the layout. (Will insert pictures of this here)
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+The second wireframes were made in InDesign to see if the colors and fonts would work together. 
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
-
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!

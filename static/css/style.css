@@ -12,7 +12,7 @@ body {
 }
 
 .dark-bg {
-    background-color: #355914;
+    background-color: #355914 ;
     ;
 }
 
@@ -30,35 +30,20 @@ body {
     z-index: 1;
 }
 
-.nav-link:hover {
-color: #f4a003;
-}
-
 
 /* Sidebar */
 #wrapper {
     padding-left: 0;
+    padding-right: 250px;
 }
 
 #sidebar-wrapper {
     z-index: 1000;
     position: absolute;
+    width: 23%;
     right: 250px;
-    width: 0;
     height: 150%;
     margin-right: -245px;
-    overflow-y: auto;
-    background: #e4e4e4;
-    overflow: hidden;
-}
-
-#sidebar-wrapper2 {
-    z-index: 1000;
-    position: absolute;
-    right: 245px;
-    width: 0;
-    height: 150%;
-    margin-right: -250px;
     overflow-y: auto;
     background: #e4e4e4;
     overflow: hidden;
@@ -70,24 +55,16 @@ color: #f4a003;
     padding-bottom: 40px;
 }
 
-#wrapper {
-    padding-right: 250px;
-}
-
-#sidebar-wrapper {
-    width: 23%;
-}
-
 .profile {
     border-radius: 50%;
-    width:60%;
+    width: 60%;
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-top: 35px;
 }
 
-.profile-text{
+.profile-text {
     font-size: 1.5vh;
     padding: 10px;
     text-align: center;
@@ -105,7 +82,6 @@ color: #f4a003;
 }
 
 
-
 /* Cards */
 .card {
     border: none;
@@ -114,7 +90,6 @@ color: #f4a003;
 
 .card-body {
     display: inline-block;
-  
 }
 
 .image-container {
@@ -164,11 +139,9 @@ color: #f4a003;
     position: relative;
 }
 
-
 .restaurant_detail {
-  color:#f4a003; 
-  font-size: 25px;
-
+    color: #f4a003;
+    font-size: 25px;
 }
 
 .card-text {
@@ -182,13 +155,14 @@ color: #f4a003;
     text-transform: uppercase;
 }
 
-.post-link:hover{
+.post-link:hover {
     color: #f4a003;
 }
+
 .page-link {
-     color: #8a3503;
-     border-radius: 5px;
-     margin-bottom: 15px;
+    color: #8a3503;
+    border-radius: 5px;
+    margin-bottom: 15px;
 }
 
 .page-link:hover {
@@ -210,7 +184,6 @@ color: #f4a003;
 }
 
 /* Comments and likes */
-
 .btn-like {
     color: #f4a003;
     border: none;
@@ -261,7 +234,6 @@ color: #f4a003;
 }
 
 
-
 /* Footer */
 
 footer {
@@ -270,11 +242,12 @@ footer {
 
 .fa-brands {
     color: #FFF;
-    }
+}
 
 .fa-brands:hover {
-color: #f4a003;
+    color: #f4a003;
 }
+
 
 @media only screen and (max-width: 990px) {
     #sidebar-wrapper {
@@ -283,42 +256,37 @@ color: #f4a003;
         width: 250px;
         overflow: scroll;
         height: 90%;
-     }
+    }
 
-     .profile-text {
+    .profile-text {
         height: 60%;
-     }
+    }
 
-     .profile {
+    .profile {
         border-radius: 50%;
-        width:40%;
+        width: 40%;
         display: block;
         margin-left: auto;
         margin-right: auto;
         margin-top: 25px;
     }
-     
+
     .card-text {
         width: 75%;
     }
-   }
+}
 
-  @media only screen and (max-width: 767px) {
-   #sidebar-wrapper2 {
-    background: #e4e4e4;
-    position: fixed;
-    padding-right: 20px;
-    padding-left: 20px;
-    width: 100%;
-    height: 50%;
-    overflow: visible;
-    display: block;
-    }
-    
+@media only screen and (max-width: 767px) {
     #sidebar-wrapper {
-      display: none;
-        }
-
+        background: #e4e4e4;
+        position: fixed top;
+        padding-right: 20px;
+        padding-left: 20px;
+        width: 100%;
+        height: 50%;
+        overflow: visible;
+        display: block;
+    }
 
     #page-content-wrapper {
         margin-top: 500px;
@@ -327,4 +295,4 @@ color: #f4a003;
     .card-text {
         width: 100%;
     }
-  }
+}
