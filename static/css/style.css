@@ -12,12 +12,12 @@ body {
 }
 
 .dark-bg {
-    background-color: #355914;
+    background-color: #000;
     ;
 }
 
 .main-bg {
-    background-color: #F9FAFC;
+    background-color: #e4e4e4;
 }
 
 
@@ -41,10 +41,10 @@ body {
     position: absolute;
     right: 250px;
     width: 0;
-    height: 80%;
+    height: 100%;
     margin-right: -250px;
     overflow-y: auto;
-    background: #F9FAFC;
+    background: #e4e4e4;
 }
 
 #page-content-wrapper {
@@ -75,6 +75,7 @@ body {
     padding: 10px;
     text-align: center;
     color: #584137;
+    height: 100%;
 }
 
 .profile-heading {
@@ -133,7 +134,7 @@ body {
 }
 
 .masthead-text {
-    color: #000;
+    color: #584137;
     position: relative;
 }
 
