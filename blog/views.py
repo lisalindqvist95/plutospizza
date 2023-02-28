@@ -61,7 +61,8 @@ class PostDetail(View):
                 "comments": comments,
                 "commented": True,
                 "comment_form": comment_form,
-                "liked": liked
+                "liked": liked,
+                "commen_form": CommentForm()
             },
         )
 

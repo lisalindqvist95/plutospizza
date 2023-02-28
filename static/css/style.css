@@ -206,6 +206,23 @@ body {
     color: #FFF;
 }
 
+/* Comments and likes */
+
+.btn-like {
+    color: #f4a003;
+    border: none;
+    background: transparent;
+}
+
+.btn-like:hover,
+.btn-like:active {
+    color: #f4a003;
+    background: transparent;
+    border: none;
+}
+
+
+/* Sign up/sign in/sign out */
 
 .btn-signup {
     background-color: #f4a003;
@@ -240,25 +257,16 @@ body {
     text-decoration: underline;
 }
 
-.btn-like {
-    color: #f4a003;
-    border: none;
-    background: transparent;
-}
-
-.btn-like:hover,
-.btn-like:active {
-    color: #f4a003;
-    background: transparent;
-    border: none;
-}
-
 
 
 /* Footer */
 
 footer {
     z-index: 2000;
+}
+
+.social-media-links:hover {
+color: #f4a003;
 }
 
 @media only screen and (max-width: 990px) {
