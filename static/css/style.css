@@ -3,6 +3,10 @@ body {
     font-family: 'Sono', sans-serif;
 }
 
+.heading, h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
 .light-bg {
     background-color: #fff;
 }
@@ -30,10 +34,6 @@ body {
 /* Sidebar */
 #wrapper {
     padding-left: 0;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
 }
 
 #sidebar-wrapper {
@@ -45,10 +45,6 @@ body {
     margin-right: -250px;
     overflow-y: auto;
     background: #F9FAFC;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
 }
 
 #page-content-wrapper {
@@ -82,6 +78,7 @@ body {
 }
 
 .profile-heading {
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 3.5vh;
     padding: 10px;
     text-align: center;
@@ -140,6 +137,13 @@ body {
     position: relative;
 }
 
+
+.restaurant_detail {
+  color:#f4a003; 
+
+}
+
+
 .post-link {
     text-decoration: none;
     color: #584137;
@@ -153,7 +157,7 @@ body {
 
 .post-title {
     margin-top: 10%;
-    margin-left: 5%;
+    margin-left: 0;
     text-transform: uppercase;
 }
 
@@ -163,6 +167,7 @@ body {
     padding-left: 5px;
     color: #FFF;
 }
+
 
 
 

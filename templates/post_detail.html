@@ -4,55 +4,50 @@
 <div class="masthead">
     <div class="container">
         <div class="row g-0">
-            <div class="col-md-6 masthead-text">
+            <div class="col-md-6 col-sm-12 masthead-text">
                 <!-- Post title goes in these h1 tags -->
                 <h1 class="post-title">{{ post.title }}</h1>
                 <!-- Post author goes before the | the post's created date goes after -->
                 <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
             </div>
+            </div>
         </div>
     </div>
-</div>
-
-<!-- Content-->
-<div class="container p-0">
-    <div class="container pt-3"></div>
-    <div class="card mb-3">
-    <div class="row no-gutters">
-        <div class="col card mb-4  mt-3 left  top">
-            <div class="col-12 col-md-4">
-                <div class="col-8">
-                    <!-- The featured image URL goes in the src attribute -->
-                    {% if "placeholder" in post.featured_image.url %}
-                    <img src="https://res.cloudinary.com/dzaewkloa/image/upload/v1677504913/Pluto%27s%20Pizza/placeholder_kokn44.png" class="recipe-detail-img" alt="Placeholder image: Pizza">
-                    {% else %}
-                    <img src=" {{ post.featured_image.url }}" class="recipe-detail-img" alt="Placeholder image: Pizza">
-                    {% endif %}
-                </div>
-            </div>
-                <div class="col-12 col-md-8">
-                    <div class="card-body recipe-detail-outer py2">
-                        <div>
-                  <p class="restaurant_detail">Restaurant: {{ post.restaurant }} </p>
-                </div>
-                    <p class="address-detail"> Address: {{ post.address }} </p>
-                    <p class="rating" id="rating">Rating: {{ post.rating }}</p>
-                    <p class="price">Price: {{ post.price }}</p>
-                    <p class="pizza">Pizza: {{ post.pizza }}</p>
-                </div>
-            </div>
-
-            
-
     
-                <!-- The post content goes inside the card-text. -->
-                <!-- Use the | safe filter inside the template tags -->
-                <p class="card-text ">
-                    {{ post.content | safe }}
-                </p>
-                <div class="row">
+    <div class="container">
+        <div class="row">
+            <!-- Content-->
+<div class="col-md-6 col-sm-12 masthead-image">
+    <!-- The featured image URL goes in the src attribute -->
+    {% if "placeholder" in post.featured_image.url %}
+    <img src="https://res.cloudinary.com/dzaewkloa/image/upload/v1677504913/Pluto%27s%20Pizza/placeholder_kokn44.png" class="col-md-12 col-sm-12 masthead-image" alt="Placeholder image: Pizza">
+    {% else %}
+    <img src=" {{ post.featured_image.url }}" class="col-md-12 col-sm-12 masthead-image" alt="Placeholder image: Pizza">
+    {% endif %}
+</div>
+            <div class="col card mb-4  mt-3 left top col-md-4 col-sm-12">
+                <div class="card-body">
+                    <!-- The post content goes inside the card-text. -->
+                    <!-- Use the | safe filter inside the template tags -->
+                    <p class="card-text ">
+                  <p><i class="fa-solid fa-utensils restaurant_detail"></i> Restaurant: {{ post.restaurant }} </p>
+                    <p class="address-detail"><i class="fa-solid fa-location-dot"></i> Address: {{ post.address }} </p>
+                    <p class="rating" id="rating"><i class="fa-solid fa-star"></i> Rating: {{ post.rating }} / 5 </p>
+                    <p class="price"><i class="fa-solid fa-credit-card"></i> Price: {{ post.price }}</p>
+                    <p class="pizza"><i class="fa-solid fa-pizza-slice"></i> Pizza: {{ post.pizza }}</p>
+                </div>
+            </div>
+                <div class="row card-text">
+                    <p class="card-text col-md-12">
+                        {{ post.content | safe }}
+                    </p>
 
 
+
+
+
+                    <div class="container">
+                        <div class="row">
                     <!-- Likes and comments -->
 
                     <div class="col-1">
