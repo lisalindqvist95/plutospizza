@@ -12,7 +12,7 @@ body {
 }
 
 .dark-bg {
-    background-color: #355914 ;
+    background-color: #355914;
     ;
 }
 
@@ -278,11 +278,19 @@ footer {
 
 @media only screen and (max-width: 767px) {
     #sidebar-wrapper {
+        position: fixed top;
         overflow: scroll;
+        width: 100%;
+        z-index: 0;
+        height: 800px;
+    }
+
+    .profile-text {
+        font-size: 11x;
     }
 
     #page-content-wrapper {
-        margin-top: 500px;
+        margin-top: 70vh;
     }
 
     .card-text {
