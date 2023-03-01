@@ -5,7 +5,7 @@
 <div class="container-fluid">
     <div class="row">
 
-        <!-- Blog Entries Column -->
+        <!-- Blog Entries Column (Updated code fom CI "I Think Therefore I Blog") -->
         <div class="col-md-10 mt-4 left col-sm-12">
             <div class="row">
                 {% for post in post_list %}
@@ -15,7 +15,7 @@
                             <div class="image-container">
                                 {% if "placeholder" in post.featured_image.url %}
                                 <img class="card-img-top"
-                                    src="https://res.cloudinary.com/dzaewkloa/image/upload/v1677504913/Pluto%27s%20Pizza/placeholder_kokn44.png">
+                                    src="https://res.cloudinary.com/dzaewkloa/image/upload/v1677531110/Pluto%27s%20Pizza/placeholder_brweyd.png">
                                 {% else %}
                                 <img class="card-img-top" src=" {{ post.featured_image.url }}">
                                 {% endif %}
