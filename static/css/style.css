@@ -183,6 +183,14 @@ body {
     color: #FFF;
 }
 
+/* Post form NOT USED */
+
+h1 .page-title {
+    display: inline-block;
+    text-align: center;
+    font-size: 10px;
+}
+
 /* Comments and likes */
 .btn-like {
     color: #f4a003;
