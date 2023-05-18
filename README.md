@@ -76,11 +76,140 @@ To manage the user stories for this project Github project was used. The project
 
 ## Data Model
 
+This Project is based around Object-Oriented Programming.
+
+It is built with Django’s Class-Based Generic Views and Django AllAuth is used as the authentication system.
+
+The project has a Post model wich allows the admin to create blogposts and a Comment model which allows users to comment on posts.
+
 ## Testing
+
+### User Story Testing
+
+As a Site Owner I can manage comments so that I can keep my blog a safe and respectful place
+ - The comments have to be approved by the site owner before they appear on the blog.
+
+As a Site Owner I have an account where I can log in and create/edit and delete blog posts
+ - Only the superuser can log in to the admin page and create, edit and delete blog posts.
+
+As a Site Owner I can log in and out of my account so that it stays secure.
+ - There is a login/out button in the navigation bar at the top. 
+
+As a Site Owner I can see if I am logged in or out so that know my status
+ - The navigaton bar changes depending on if the user is logged in or not, a loggen in user has the option to log out and a logged out user has the option to log in or sign up.
+
+
+As a New User I can register for an account so that I can comment and like posts
+ - Only logged in users can comment and like posts, there is an option to sign up in the navigation bar for a logged out user. 
+
+
+As a Site User I have an account where I can log in and like/comment on posts 
+ - A user with an account can log in an like/comment on posts, the can also edit and delete their comments.
+
+As a Site User I can find a summery about who owns the blog, what content it has and why it exists so that I can decide if it’s something I want to read
+ - The blog has a sidebar with an about section so that the user can easaly find info about the owner.
+
+As a Site User I can see what the price range is for the pizza so that I know if it’s something I’m interested in
+ - Every post contains information about the price-range, which is part of the post model.
+
+As a Site User I can see the name and location of the restaurant so that I know where to go if I want to try it myself.
+ - Every post contains information about the location, which is part of the post model.
+
+As a Site User I can see the name of the pizza so that I can order it myself
+ - Every post contains information about the pizza, which is part of the post model.
+
+As a Site User I can log in and out of my account so that it stays secure
+ - Login and out function is located in the navigation bar so that the user easily can log out. 
+
+As a Site User I can see if I am logged in or out so that I know my status
+ - The navigaton bar changes depending on if the user is logged in or not, a loggen in user has the option to log out and a logged out user has the option to log in or sign up.
+
+As a Site User I can immediately easily find the navigation so that I can use the website with ease
+ - The navigation bar is placed at the top of the blog for the user to easily find. 
+
+As a Site User I can view a list of blog posts so that I can choose which post to read
+ - The homepage is pagineted to show a list of posts with images and titles for the user to choose between. 
+
+As a Site User I can click on the blog post I want to read so that can choose to read the full post and comments left by other users
+ - If the users clicks on a post on the home-page it will take them to the blogpost in the post-detail view.
+
+
+### Validator Testing
+
+#### HTML
+All HTML pages were run through the [W3C HTML Validator](https://validator.w3.org/) and all errors where corrected. 
+
+#### CSS
+
+The CSS passed through the official [W3C CSS Validator](https://jigsaw.w3.org/css-validator/).
+
+#### Python 
+
+All Python files passed through [Pep8](http://ww1.pep8online.com/).
+
+### Browser Testing
+
+### Device Testing
+
+### Manual Testing
+
+### Bugs
+
+Placeholder image not showing
+
+NoReverseMatch 
+https://stackoverflow.com/questions/38390177/what-is-a-noreversematch-error-and-how-do-i-fix-it
+
+
+### Unfixed bugs
+
 
 ## Security Features and Defensive Design
 
+### User Authentication
+Django's UserPassesTestMixin is used so that only users who created the comment edit/delete it.
+
+### Form Validation
+The form won't submit if it contains empty or invalid data.
+
+### Database Security
+An env.py file is used to store the database url and secret key to prevent unwanted connections to the database.
+
+Cross-Site Request Forgery (CSRF) tokens are used on the forms on the site. 
+
 ## Features
+
+### Header
+
+#### Logo
+
+#### Navigation
+
+### Footer
+
+### Pagination
+
+### About 
+
+### User Avvount
+
+#### Sign up
+
+#### Sign in
+
+#### Log out 
+
+### Post detail
+
+### Comments 
+
+#### Edit 
+
+#### Delete
+
+### Create new post
+
+
 
 ## Deployment 
 
@@ -126,6 +255,34 @@ This project was depolyed via Heroku from the GitHub repository. See the steps t
 
 # Languages
 
+- Python
+- HTML
+- CSS
+- Javascript
+
 ## Frameworks - Libraries - Programs Used
 
+ - [Django](https://www.djangoproject.com/): Main framework used for the project
+ - [Django-allauth](https://django-allauth.readthedocs.io/en/latest/installation.html): Authentication library used for the project 
+ - [PostgreSQL](https://www.postgresql.org/:) Used as database
+ - [Heroku](https://id.heroku.com/login): Used for deployement
+Balsamiq - Used to generate Wireframe images.
+ - [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/): Used to test responsiveness
+ - [Font Awesome](https://fontawesome.com/): Used for icons
+ - [GitHub](https://github.com/): Used for version control and agile tool 
+ - [Google Fonts](https://fonts.google.com/): Used for fonts
+ - [W3C](https://www.w3.org/): Used to validate HTML & CSS 
+ - [PEP8 Online](http://ww1.pep8online.com/): used to validate Python code
+ - [Summernote](https://summernote.org/): Editor to allow users to edit their posts
+ - [Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/): used for Django Forms
+ - [Cloudinary](https://cloudinary.com/): Image hosting service 
+ - [Bootstrap](https://getbootstrap.com/docs/4.6/getting-started/introduction/): CSS Framework for responsiveness and styling
+
 ## Credits
+- [W3Schools](https://www.w3schools.com/)
+- [Django Docs](https://docs.djangoproject.com/en/4.0/) 
+- [Bootstrap](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
+- [Stack Overflow](https://stackoverflow.com/)
+- [Code Institute - Blog Walkthrough Project](https://github.com/Code-Institute-Solutions/Django3blog)
+- [AliOKeeffe](https://github.com/AliOKeeffe/PP4_My_Meal_Planner) - Easy Eater Project
+- [Unsplash](https://unsplash.com/)
