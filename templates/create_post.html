@@ -2,7 +2,7 @@
 {% load crispy_forms_tags %}
 
 <div class="container">
-    <h1 class="page-title m5">Add Post</h1>
+    <h1 class="page-title m5">Create Post</h1>
     <hr class="home-break">
     <br>
     <div class="row justify-content-center ">
@@ -13,8 +13,8 @@
             <form method="post" class="post-form mb-5" enctype="multipart/form-data">
                 {{ form | crispy }}
                 {% csrf_token %}
-                <button type="submit" class="btn btn-outline-dark">Submit</button>
-                <a class="btn btn btn-outline-dark m-2" href="{%  url 'home' %}">Cancel</a>
+                <button type="submit" class="btn btn-signup btn-lg">Submit</button>
+                <a class="btn btn-signup btn-lg" href="{%  url 'home' %}">Cancel</a>
             </form>
         </div>
         {% endif %}

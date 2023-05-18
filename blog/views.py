@@ -1,11 +1,13 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
-from .models import Post
-from .forms import PostForm
-from .forms import CommentForm
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.contrib.messages.views import SuccessMessageMixin
+from django.views import generic, View
+from django.urls import reverse_lazy
+from .models import Post, Comment
+from .forms import PostForm
+from .forms import CommentForm, Comment
 
 
 class PostList(generic.ListView):
@@ -36,7 +38,7 @@ class PostDetail(View):
                 "comment_form": CommentForm()
             },
         )
-    
+
     def post(self, request, slug, *args, **kwargs):
 
         queryset = Post.objects.filter(status=1)
@@ -108,3 +110,68 @@ class CreatePost(LoginRequiredMixin, SuccessMessageMixin, generic.CreateView):
             cleaned_data,
             calculated_field=self.object.title,
         )
+
+
+class UpdateComment(
+        LoginRequiredMixin, UserPassesTestMixin,
+        SuccessMessageMixin, generic.UpdateView):
+
+    """
+    This view is used to allow logged in users to edit their own comments
+    """
+    model = Comment
+    form_class = CommentForm
+    template_name = 'update_comment.html'
+    success_message = "Comment edited successfully"
+
+    def form_valid(self, form):
+        """
+        This method is called when valid form data has been posted.
+        The signed in user is set as the author of the comment.
+        """
+        form.instance.name = self.request.user.username
+        return super().form_valid(form)
+
+    def test_func(self):
+        """
+        Prevent another user from editing user's comments
+        """
+        comment = self.get_object()
+        return comment.name == self.request.user.username
+
+    def get_success_url(self):
+        """ Return to recipe detail view when comment updated sucessfully"""
+        post = self.object.post
+        return reverse_lazy('post_detail', kwargs={'slug': post.slug})
+
+
+class DeleteComment(
+        LoginRequiredMixin, UserPassesTestMixin, generic.DeleteView):
+
+    """
+    This view is used to allow logged in users to delete their own comments
+    """
+    model = Comment
+    template_name = 'delete_comment.html'
+    success_message = "Comment deleted successfully"
+
+    def test_func(self):
+        """
+        Prevent another user from deleting user's comments
+        """
+        comment = self.get_object()
+        return comment.name == self.request.user.username
+
+    def delete(self, request, *args, **kwargs):
+        """
+        This function is used to display success message given
+        SuccessMessageMixin cannot be used in generic.DeleteView.
+        Credit: https://stackoverflow.com/questions/24822509/
+        success-message-in-deleteview-not-shown
+        """
+        return super(DeleteComment, self).delete(request, *args, **kwargs)
+
+    def get_success_url(self):
+        """ Return to recipe detail view when comment deleted sucessfully"""
+        post = self.object.post
+        return reverse_lazy('post_detail', kwargs={'slug': post.slug})
