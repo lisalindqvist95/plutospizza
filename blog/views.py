@@ -6,11 +6,11 @@ from django.contrib.messages.views import SuccessMessageMixin
 from django.views import generic, View
 from django.urls import reverse_lazy
 from .models import Post, Comment
-from .forms import PostForm
-from .forms import CommentForm, Comment
+from .forms import PostForm, CommentForm, Comment
 
 
 class PostList(generic.ListView):
+    """Homepage view, pagination"""
     model = Post
     queryset = Post.objects.filter(status=1).order_by("-created_on")
     template_name = "index.html"
@@ -18,7 +18,7 @@ class PostList(generic.ListView):
 
 
 class PostDetail(View):
-
+    """Postdetails, posts and comments"""
     def get(self, request, slug, *args, **kwargs):
         queryset = Post.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
@@ -83,19 +83,17 @@ class PostLike(View):
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
-"""new code"""
-
 
 class CreatePost(LoginRequiredMixin, SuccessMessageMixin, generic.CreateView):
-    """This view is used to allow logged in users to create a recipe"""
+    """Create New Post view"""
     form_class = PostForm
     template_name = 'create_post.html'
     success_message = "%(calculated_field)s was created successfully"
 
     def form_valid(self, form):
         """
-        This method is called when valid form data has been posted.
-        The signed in user is set as the author of the recipe.
+        Credit AliOKeefe The Easy Eater,
+        https://github.com/AliOKeeffe/PP4_My_Meal_Planner
         """
         form.instance.author = self.request.user
         return super().form_valid(form)
@@ -117,7 +115,7 @@ class UpdateComment(
         SuccessMessageMixin, generic.UpdateView):
 
     """
-    This view is used to allow logged in users to edit their own comments
+    Allow logged in users to edit their comments
     """
     model = Comment
     form_class = CommentForm

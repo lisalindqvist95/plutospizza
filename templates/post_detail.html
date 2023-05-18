@@ -101,13 +101,14 @@
                     <!-- The body of the comment goes before the | -->
                     {{ comment.body | linebreaks }}
                 </div>
-                 <!-- Comment edit and delete -->
+                
+                <!-- Comment edit and delete -->
  {% if user.is_authenticated and user.username == comment.name %}
- <span class="comment-action-btn pl-2">
+ <span class="comment-btn">
      <a href="{% url 'update_comment' comment.id %}" aria-label="edit-comment"><i
-             class="fas fa-edit link-primary"></i>Edit comment</a>
+             class="fas fa-edit link-primary comment-btn" id="comment-btn"></i> Edit comment</a>
      <a href="{% url 'delete_comment' comment.id %}" aria-label="delete-comment"><i
-             class="fas fa-times"></i>Delete comment</a>
+             class="fas fa-times comment-btn"></i> Delete comment</a>
  </span>
  {% endif %}
 

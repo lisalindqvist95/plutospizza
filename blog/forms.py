@@ -15,13 +15,13 @@ class CommentForm(forms.ModelForm):
 
 
 class PostForm(forms.ModelForm):
-    """ Create Recipe Form """
+    """ Create Post Form """
     def __init__(self, *args, **kwargs):
         super(PostForm, self).__init__(*args, **kwargs)
 
     class Meta:
         """
-        Get recipe model, choose fields to display and add summernote widget
+        Get Post model, choose which fields to display
         """
         model = Post
         fields = [
@@ -38,5 +38,3 @@ class PostForm(forms.ModelForm):
             'content',
             'status',
         ]
-    
-    

@@ -3,8 +3,14 @@ from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 from django.urls import reverse
 
-
+"""
+Status for posts
+"""
 STATUS = ((0, "Draft"), (1, "Published"))
+
+"""
+Post Model below:
+"""
 
 
 class Post(models.Model):
@@ -39,6 +45,11 @@ class Post(models.Model):
 
     def number_of_likes(self):
         return self.likes.count()
+
+
+"""
+Comment Model below:
+"""
 
 
 class Comment(models.Model):

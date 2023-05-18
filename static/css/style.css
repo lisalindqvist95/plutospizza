@@ -205,6 +205,16 @@ h1 .page-title {
     border: none;
 }
 
+#comment-btn a {
+    color: #f4a003;
+    text-decoration: none;
+}
+
+a {
+    color: #f4a003;
+    text-decoration: none;
+}
+
 
 /* Sign up/sign in/sign out */
 
