@@ -148,8 +148,12 @@ The CSS passed through the official [W3C CSS Validator](https://jigsaw.w3.org/cs
 All Python files passed through [Pep8](http://ww1.pep8online.com/).
 
 ### Browser Testing
+ - The website is tested on the commonly used browsers: Chrome, Safari, Edge, Firefox and Opera
+ - All features worked on the tested browsers
 
 ### Device Testing
+ - The website is responsive so that it can be used on different screen-sizes
+ - The responsiveness was tested using DevTools
 
 ### Manual Testing
 
@@ -160,6 +164,7 @@ Placeholder image not showing
 NoReverseMatch 
 https://stackoverflow.com/questions/38390177/what-is-a-noreversematch-error-and-how-do-i-fix-it
 
+DRAFTS
 
 ### Unfixed bugs
 
@@ -180,35 +185,67 @@ Cross-Site Request Forgery (CSRF) tokens are used on the forms on the site.
 ## Features
 
 ### Header
+![Header](media/images/header.png)
+ - The header contains an image that matches the colors on the website and informs the user of what the main content of the website is about.
 
 #### Logo
+![Logo](media/images/logo_pizza.png)
+ - The logo is meant to inform the user of the websites content and owner without distracting from this being a simple blog.
 
 #### Navigation
+![Navbar](media/images/nav.png) 
+- The navigationbar changes depending on if the user is logged in or not
+- A logged out user i able to log in or create an account
 
 ### Footer
+![Footer](media/images/footer.png)
+ - The footer contains social media links so that users can find out more about the owner and follow him on other platforms
+ - The links open in a new tab so that the user isn't removed from the blog
 
 ### Pagination
+![Pagination](media/images/pagination.png)
+ - The homepage is paginetad to show 6 posts at a time to make it easier for the user to see the posts and not get overwhelmed
+ - More than 6 posts will result in more pages for the user to click through
+ - The posts are displayed based on when they where created, from newest to oldest
 
 ### About 
+![About](media/images/about.png)
+ - The about section is placed in a sidebar so that it is always easy for the user to find
 
-### User Avvount
+### User Account
 
 #### Sign up
+![Sign up](media/images/sign_up.png)
+ - A logged out user can sign up for an account
+ - If they already have an account they can click the "sign in" text above
+ - Empty or invalid input will notify the user
 
 #### Sign in
+![Sign in](media/images/sign_in.png)
+ - A logged out user can sign in to their account
+ - Empty or invalid input will notify the user
 
-#### Log out 
+#### Sign out 
+![Sign out](media/images/sign_out.png)
+ - A logged in user can choose to sign out
 
 ### Post detail
+![Post detail](media/images/post_detail.png)
+ - The post details contains the blogpost with information about the restaurant, pizza, pricing and rating
+ - The post also contains an image 
+ - Under the post users can like the post and the number of likes is displayed
 
 ### Comments 
+![Comment](media/images/comment.png)
+ - Comments are dsiplayed underneath the blog post
 
 #### Edit 
+![Edit Comment](media/images/edit.png)
+ - The creator of the comment can choose to edit the comment they have posted once it has been approved
 
 #### Delete
-
-### Create new post
-
+![Delete Comment](media/images/delete.png)
+ - The creator of the comment can choose to delete the comment they have posted once it has been approved
 
 
 ## Deployment 
@@ -266,7 +303,7 @@ This project was depolyed via Heroku from the GitHub repository. See the steps t
  - [Django-allauth](https://django-allauth.readthedocs.io/en/latest/installation.html): Authentication library used for the project 
  - [PostgreSQL](https://www.postgresql.org/:) Used as database
  - [Heroku](https://id.heroku.com/login): Used for deployement
-Balsamiq - Used to generate Wireframe images.
+Balsamiq - Used to generate Wireframe images
  - [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/): Used to test responsiveness
  - [Font Awesome](https://fontawesome.com/): Used for icons
  - [GitHub](https://github.com/): Used for version control and agile tool 

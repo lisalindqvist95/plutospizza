@@ -13,7 +13,6 @@
       <p>{% trans 'Sure you want to sign out?' %}</p>
     </div>
   </div>
-</div>
 <div class="row">
   <div class="col-md-8 mt-3 offset-md-2">
     <form method="post" action="{% url 'account_logout' %}">
@@ -24,6 +23,7 @@
       <button class="btn btn-signout right" type="submit">{% trans 'Sign Out' %}</button>
     </form>
   </div>
+</div>
 </div>
 
 {% endblock %}
