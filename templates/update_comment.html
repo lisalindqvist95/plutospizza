@@ -2,13 +2,14 @@
 {% block content %}
 {% load crispy_forms_tags %}
 
+<!--  Credit AliOKeefe The Easy Eater,
+https://github.com/AliOKeeffe/PP4_My_Meal_Planner -->
 <div class="container">
-    <h1 class="page-title">Edit Comment</h1>
+    <h1 class="m10 col-11 col-md-8 col-lg-6 mt-3">Edit Comment</h1>
     <hr class="home-break">
     <br>
     <div class="row justify-content-center">
         {% if user.is_authenticated and comment.name == user.username  %}
-        <!-- Ensure the user is signed in, and the comment they're trying to access is owned by them -->
         <div class="col-11 col-md-6 col-lg-4 mt-3">
             <form method="post" class="add-post">
                 {{ form | crispy }}

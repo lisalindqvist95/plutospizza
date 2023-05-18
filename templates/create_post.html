@@ -1,15 +1,17 @@
 {% extends 'base.html' %} {% block content %}
 {% load crispy_forms_tags %}
 
+<!--  Credit AliOKeefe The Easy Eater,
+https://github.com/AliOKeeffe/PP4_My_Meal_Planner -->
 <div class="container">
-    <h1 class="page-title m5">Create Post</h1>
+    <h3 class="m10 col-11 col-md-8 col-lg-6 mt-3">Create Post</h3>
     <hr class="home-break">
     <br>
     <div class="row justify-content-center ">
         {% if user.is_authenticated %}
         {% load cloudinary %}
-        <div class="col-11 col-md-8 col-lg-6 mt-3 add-recipe-outer">
-            <!--  Add Recipe Form -->
+        <div class="col-11 col-md-8 col-lg-6 mt-3">
+            <!--  Add new post form -->
             <form method="post" class="post-form mb-5" enctype="multipart/form-data">
                 {{ form | crispy }}
                 {% csrf_token %}

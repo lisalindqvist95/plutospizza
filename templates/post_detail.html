@@ -106,9 +106,9 @@
  {% if user.is_authenticated and user.username == comment.name %}
  <span class="comment-btn">
      <a href="{% url 'update_comment' comment.id %}" aria-label="edit-comment"><i
-             class="fas fa-edit link-primary comment-btn" id="comment-btn"></i> Edit comment</a>
+             class="fas fa-edit comment-btn" id="comment-btn"></i> Edit comment</a>
      <a href="{% url 'delete_comment' comment.id %}" aria-label="delete-comment"><i
-             class="fas fa-times comment-btn"></i> Delete comment</a>
+             class="fas fa-times comment-btn" id="comment-btn"></i> Delete comment</a>
  </span>
  {% endif %}
 
@@ -145,7 +145,5 @@
         </div>
     </div>
 </div>
-
-
 
 {% endblock content %}

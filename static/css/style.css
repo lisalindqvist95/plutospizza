@@ -183,13 +183,6 @@ body {
     color: #FFF;
 }
 
-/* Post form NOT USED */
-
-h1 .page-title {
-    display: inline-block;
-    text-align: center;
-    font-size: 10px;
-}
 
 /* Comments and likes */
 .btn-like {
@@ -205,12 +198,14 @@ h1 .page-title {
     border: none;
 }
 
-#comment-btn a {
-    color: #f4a003;
+.comment-btn a {
+    color: #584137;
     text-decoration: none;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 13px;
 }
 
-a {
+.comment-btn a:hover {
     color: #f4a003;
     text-decoration: none;
 }
@@ -296,19 +291,20 @@ footer {
 
 @media only screen and (max-width: 767px) {
     #sidebar-wrapper {
-        position: fixed top;
+        position: absolute;
+        top: 250px;
         overflow: scroll;
         width: 100%;
-        z-index: 0;
         height: 800px;
+        z-index: 0;
     }
 
     .profile-text {
-        font-size: 11x;
+        font-size: 13px;
     }
 
     #page-content-wrapper {
-        margin-top: 70vh;
+        margin-top: 100vh;
     }
 
     .card-text {

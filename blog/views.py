@@ -99,11 +99,6 @@ class CreatePost(LoginRequiredMixin, SuccessMessageMixin, generic.CreateView):
         return super().form_valid(form)
 
     def get_success_message(self, cleaned_data):
-        """
-        This function overrides the get_success_message() method to add
-        the recipe title into the success message.
-        source: https://docs.djangoproject.com/en/4.0/ref/contrib/messages/
-        """
         return self.success_message % dict(
             cleaned_data,
             calculated_field=self.object.title,
@@ -116,42 +111,41 @@ class UpdateComment(
 
     """
     Allow logged in users to edit their comments
+    Credit AliOKeefe The Easy Eater,
+    https://github.com/AliOKeeffe/PP4_My_Meal_Planner
     """
     model = Comment
     form_class = CommentForm
     template_name = 'update_comment.html'
-    success_message = "Comment edited successfully"
+    success_message = "Comment successfully edited"
 
     def form_valid(self, form):
-        """
-        This method is called when valid form data has been posted.
-        The signed in user is set as the author of the comment.
-        """
         form.instance.name = self.request.user.username
         return super().form_valid(form)
 
     def test_func(self):
         """
-        Prevent another user from editing user's comments
+        Prevents other users from editing the comment
         """
         comment = self.get_object()
         return comment.name == self.request.user.username
 
     def get_success_url(self):
-        """ Return to recipe detail view when comment updated sucessfully"""
+        """ Return to post detail when the comment is updated"""
         post = self.object.post
         return reverse_lazy('post_detail', kwargs={'slug': post.slug})
 
 
 class DeleteComment(
         LoginRequiredMixin, UserPassesTestMixin, generic.DeleteView):
-
     """
-    This view is used to allow logged in users to delete their own comments
+    Allow logged in users to delete their comments
+    Credit AliOKeefe The Easy Eater,
+    https://github.com/AliOKeeffe/PP4_My_Meal_Planner
     """
     model = Comment
     template_name = 'delete_comment.html'
-    success_message = "Comment deleted successfully"
+    success_message = "Comment successfully deleted"
 
     def test_func(self):
         """
@@ -162,14 +156,14 @@ class DeleteComment(
 
     def delete(self, request, *args, **kwargs):
         """
-        This function is used to display success message given
-        SuccessMessageMixin cannot be used in generic.DeleteView.
+        Credit AliOKeefe The Easy Eater,
+        https://github.com/AliOKeeffe/PP4_My_Meal_Planner who credits
         Credit: https://stackoverflow.com/questions/24822509/
         success-message-in-deleteview-not-shown
         """
         return super(DeleteComment, self).delete(request, *args, **kwargs)
 
     def get_success_url(self):
-        """ Return to recipe detail view when comment deleted sucessfully"""
+        """ Return to post detail view when comment is deleted"""
         post = self.object.post
         return reverse_lazy('post_detail', kwargs={'slug': post.slug})
