@@ -6,7 +6,7 @@ from django.contrib.messages.views import SuccessMessageMixin
 from django.views import generic, View
 from django.urls import reverse_lazy
 from .models import Post, Comment
-from .forms import PostForm, CommentForm, Comment
+from .forms import CommentForm, Comment
 
 
 class PostList(generic.ListView):
@@ -82,27 +82,6 @@ class PostLike(View):
             post.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
-
-
-class CreatePost(LoginRequiredMixin, SuccessMessageMixin, generic.CreateView):
-    """Create New Post view"""
-    form_class = PostForm
-    template_name = 'create_post.html'
-    success_message = "%(calculated_field)s was created successfully"
-
-    def form_valid(self, form):
-        """
-        Credit AliOKeefe The Easy Eater,
-        https://github.com/AliOKeeffe/PP4_My_Meal_Planner
-        """
-        form.instance.author = self.request.user
-        return super().form_valid(form)
-
-    def get_success_message(self, cleaned_data):
-        return self.success_message % dict(
-            cleaned_data,
-            calculated_field=self.object.title,
-        )
 
 
 class UpdateComment(

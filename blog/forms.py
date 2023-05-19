@@ -1,4 +1,4 @@
-from .models import Comment, Post
+from .models import Comment
 from django import forms
 
 
@@ -12,29 +12,3 @@ class CommentForm(forms.ModelForm):
         """Get comment model, choose fields to display"""
         model = Comment
         fields = ('body',)
-
-
-class PostForm(forms.ModelForm):
-    """ Create Post Form """
-    def __init__(self, *args, **kwargs):
-        super(PostForm, self).__init__(*args, **kwargs)
-
-    class Meta:
-        """
-        Get Post model, choose which fields to display
-        """
-        model = Post
-        fields = [
-            'title',
-            'slug',
-            'author',
-            'featured_image',
-            'excerpt',
-            'restaurant',
-            'pizza',
-            'price',
-            'address',
-            'rating',
-            'content',
-            'status',
-        ]

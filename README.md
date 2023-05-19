@@ -157,14 +157,65 @@ All Python files passed through [Pep8](http://ww1.pep8online.com/).
 
 ### Manual Testing
 
+| **Element**                                 | **Action** | **Expected Result**                                         | **Pass/Fail** |
+|---------------------------------------------|------------|-------------------------------------------------------------|---------------|
+| _NavBar_                                    |            |                                                             |               |
+|                                             |            |                                                             |               |
+| Logo                                        | Click      | Redirect to homepage                                        | Pass          |
+| Home Link                                   | Click      | Redirect to homepage                                        | Pass          |
+| Log out link                                | Display    | Not visible for logged out user                             | Pass          |
+| Log out link                                | Click      | Log out page                                                | Pass          |
+| Log out confirmation: yes                   | Click      | Log out user                                                | Pass          |
+| Log in link                                 | Display    | Not visible for logged in user                              | Pass          |
+| Log in link                                 | Click      | Sign in page                                                | Pass          |
+| Sign in: Correct user info                  | Click      | Sign in user                                                | Pass          |
+| Sign in: Incorrect user info                | Click      | Don't sign in user                                          | Pass          |
+| Sign up                                     | Display    | Not visible for logged in user                              | Pass          |
+| Sign up: Correct user info                  | Click      | Sign up user                                                | Pass          |
+| Sign up: Incorrect user info                | Click      | Display issue, do not sign up user                          | Pass          |
+|                                             |            |                                                             |               |
+| _Footer_                                    |            |                                                             |               |
+|                                             |            |                                                             |               |
+| Social meda links                           | Click      | Open in new tab                                             | Pass          |
+| Social meda links                           | Click      | Open correct webpage                                        | Pass          |
+|                                             |            |                                                             |               |
+| _Comments_                                  |            |                                                             |               |
+|                                             |            |                                                             |               |
+| Leave a comment - logged in user            | Display    | Form to leave a comment                                     | Pass          |
+| Leave a comment - logged out user           | Display    | No form to leave a comment                                  | Pass          |
+| Submit comment                              | Click      | Show message that comment is waiting for approval           | Pass          |
+| Edit comment - author                       | Display    | Show button to edit comment                                 | Pass          |
+| Edit comment - author                       | Click      | Edit comment form                                           | Pass          |
+| Edit comment form - Update button           | Click      | Update comment and redirect to post detail                  | Pass          |
+| Edit comment form - Cancel button           | Click      | Redirect to post detail, leave comment unedited             | Pass          |
+| Delete comment - author                     | Display    | Show button to delete comment                               | Pass          |
+| Delete comment form - delete button         | Click      | Delete comment and redirect to post detail                  | Pass          |
+| Delete comment form - cancel button         | Click      | Redirect to post detail, keep comment                       | Pass          |
+| Edit comment - Not author                   | Display    | Don't show                                                  | Pass          |
+| Delete comment - Not author                 | Display    | Don't show                                                  | Pass          |
+|                                             |            |                                                             |               |
+| _Homepage_                                  |            |                                                             |               |
+|                                             |            |                                                             |               |
+| Pagination                                  | Display    | Show only 6 posts per page                                  | Pass          |
+| Post detail                                 | Click      | Redirect to post                                            | Pass          |
+|                                             |            |                                                             |               |
+| _Likes_                                     |            |                                                             |               |
+|                                             |            |                                                             |               |
+| Like button - logged in user - unliked post | Click      | Like post                                                   | Pass          |
+| Like button - logged in user - liked post   | Click      | Unlike post (a post cannot be liked by the same user twice) | Pass          |
+| Like button - logged out user               | Click      | Nothing, user have to be logge in to like a post            | Pass          |
+
+
 ### Bugs
 
-Placeholder image not showing
+#### Placeholder image not showing
+ - The placeholder image was not showing, it was because it had been updated in the cloudinary storage which updates its unique link. It worked when the code was updated with the new link. 
 
-NoReverseMatch 
-https://stackoverflow.com/questions/38390177/what-is-a-noreversematch-error-and-how-do-i-fix-it
+#### NoReverseMatch 
+ - NoReverseMatch came up as an error when trying the edit comment button, by checking [Stack Overflow](https://stackoverflow.com/questions/38390177/what-is-a-noreversematch-error-and-how-do-i-fix-it) the issue could be debugged and a typo in the views file was found. 
 
-DRAFTS
+#### Layout in PostDetail
+ - The layout in PostDetail was accidentally changed so that the comments and likes section moved to where it was not supposed to be, it was fixed by going through the code and fixing the syntax errors. 
 
 ### Unfixed bugs
 
@@ -297,13 +348,12 @@ This project was depolyed via Heroku from the GitHub repository. See the steps t
 - CSS
 - Javascript
 
-## Frameworks - Libraries - Programs Used
+## Frameworks & Libraries Used
 
  - [Django](https://www.djangoproject.com/): Main framework used for the project
  - [Django-allauth](https://django-allauth.readthedocs.io/en/latest/installation.html): Authentication library used for the project 
  - [PostgreSQL](https://www.postgresql.org/:) Used as database
  - [Heroku](https://id.heroku.com/login): Used for deployement
-Balsamiq - Used to generate Wireframe images
  - [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/): Used to test responsiveness
  - [Font Awesome](https://fontawesome.com/): Used for icons
  - [GitHub](https://github.com/): Used for version control and agile tool 
@@ -314,6 +364,7 @@ Balsamiq - Used to generate Wireframe images
  - [Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/): used for Django Forms
  - [Cloudinary](https://cloudinary.com/): Image hosting service 
  - [Bootstrap](https://getbootstrap.com/docs/4.6/getting-started/introduction/): CSS Framework for responsiveness and styling
+ - [Tables Generator](https://www.tablesgenerator.com/markdown_tables): Used to create markdown table
 
 ## Credits
 - [W3Schools](https://www.w3schools.com/)
