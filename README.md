@@ -1,4 +1,5 @@
 # Pluto's Pizza Blog 
+![mockup](media/images/mockup.jpg)
 
 ## Project Goals:
 
@@ -218,7 +219,7 @@ All Python files passed through [Pep8](http://ww1.pep8online.com/).
  - The layout in PostDetail was accidentally changed so that the comments and likes section moved to where it was not supposed to be, it was fixed by going through the code and fixing the syntax errors. 
 
 ### Unfixed bugs
-
+There are no known unfixed bugs.
 
 ## Security Features and Defensive Design
 
@@ -374,3 +375,4 @@ This project was depolyed via Heroku from the GitHub repository. See the steps t
 - [Code Institute - Blog Walkthrough Project](https://github.com/Code-Institute-Solutions/Django3blog)
 - [AliOKeeffe](https://github.com/AliOKeeffe/PP4_My_Meal_Planner) - Easy Eater Project
 - [Unsplash](https://unsplash.com/)
+- [Adobe stock](https://stock.adobe.com/) 
