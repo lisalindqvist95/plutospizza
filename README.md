@@ -63,7 +63,10 @@ images are uploaded with the post and should contain a photo of the pizza being 
 The fonts used are Plus Jakarta Sans and Sono. Sono was chosen for its familiar and playful feeling while still being readable. Plus Jakarta Sans was chosen to contrast Sono and make the logo stand out. The fonts were imported via Google Fonts.
 
 #### Wireframes
-The first wireframes were rough sketches made by hand on paper for the layout. (Will insert pictures of this here)
+The first wireframes were rough sketches made by hand on paper for the layout. 
+![Wireframe1](media/images/wire1.jpg)
+![Wireframe2](media/images/wire2.jpg)
+![Wireframe3](media/images/wire3.jpg)
 
 The second wireframes were made in InDesign to see if the colors and fonts would work together. 
 ![Wireframe1](media/images/wireframe1.png)
